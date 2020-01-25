@@ -1,0 +1,1269 @@
+Analysis & Synthesis report for processador
+Fri Dec 06 11:23:51 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |processador|unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated
+ 16. Source assignments for Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1
+ 17. Parameter Settings for User Entity Instance: Memoria:memoria1|altsyncram:memoria[0][15]__1
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "unidade_de_controle:unidade_de_controle1|Controlador:Controller1"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Dec 06 11:23:51 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; processador                                     ;
+; Top-level Entity Name              ; processador                                     ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 150                                             ;
+;     Total combinational functions  ; 129                                             ;
+;     Dedicated logic registers      ; 66                                              ;
+; Total registers                    ; 66                                              ;
+; Total pins                         ; 47                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 4,096                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; processador        ; processador        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; unidade_de_controle.vhd          ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/unidade_de_controle.vhd              ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/comparador.vhd                       ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/datapath.vhd                         ;         ;
+; banco_instrucao.vhd              ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/banco_instrucao.vhd                  ;         ;
+; BancoRegistrador.vhd             ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/BancoRegistrador.vhd                 ;         ;
+; contador.vhd                     ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/contador.vhd                         ;         ;
+; IR.vhd                           ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/IR.vhd                               ;         ;
+; Memoria.vhd                      ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/Memoria.vhd                          ;         ;
+; MUX.vhd                          ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/MUX.vhd                              ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/ULA.vhd                              ;         ;
+; display.vhd                      ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/display.vhd                          ;         ;
+; processador.vhd                  ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/processador.vhd                      ;         ;
+; mux_STOI.vhd                     ; yes             ; User VHDL File               ; C:/Users/Aluno/Desktop/processador/mux_STOI.vhd                         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_cod1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Aluno/Desktop/processador/db/altsyncram_cod1.tdf               ;         ;
+; db/altsyncram_ebh1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Aluno/Desktop/processador/db/altsyncram_ebh1.tdf               ;         ;
+; controlador.vhd                  ; yes             ; Auto-Found VHDL File         ; C:/Users/Aluno/Desktop/processador/controlador.vhd                      ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 150   ;
+;                                             ;       ;
+; Total combinational functions               ; 129   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 44    ;
+;     -- 3 input functions                    ; 50    ;
+;     -- <=2 input functions                  ; 35    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 109   ;
+;     -- arithmetic mode                      ; 20    ;
+;                                             ;       ;
+; Total registers                             ; 66    ;
+;     -- Dedicated logic registers            ; 66    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 47    ;
+; Total memory bits                           ; 4096  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 76    ;
+; Total fan-out                               ; 833   ;
+; Average fan-out                             ; 3.23  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
+; |processador                                  ; 129 (0)           ; 66 (0)       ; 4096        ; 0            ; 0       ; 0         ; 47   ; 0            ; |processador                                                                                                          ; work         ;
+;    |Memoria:memoria1|                         ; 3 (3)             ; 16 (16)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|Memoria:memoria1                                                                                         ; work         ;
+;       |altsyncram:memoria[0][15]__1|          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|Memoria:memoria1|altsyncram:memoria[0][15]__1                                                            ; work         ;
+;          |altsyncram_cod1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated                             ; work         ;
+;             |altsyncram_ebh1:altsyncram1|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1 ; work         ;
+;    |banco_instrucao:banco_instrucao1|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|banco_instrucao:banco_instrucao1                                                                         ; work         ;
+;    |datapath:datapath1|                       ; 79 (0)            ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:datapath1                                                                                       ; work         ;
+;       |BancoRegistrador:bancoRegistradores1|  ; 34 (34)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:datapath1|BancoRegistrador:bancoRegistradores1                                                  ; work         ;
+;       |display:disp|                          ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:datapath1|display:disp                                                                          ; work         ;
+;       |mux_STOI:mux_mem|                      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|datapath:datapath1|mux_STOI:mux_mem                                                                      ; work         ;
+;    |display:display_stoi|                     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|display:display_stoi                                                                                     ; work         ;
+;    |unidade_de_controle:unidade_de_controle1| ; 12 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unidade_de_controle:unidade_de_controle1                                                                 ; work         ;
+;       |Controlador:Controller1|               ; 5 (5)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unidade_de_controle:unidade_de_controle1|Controlador:Controller1                                         ; work         ;
+;       |IR:IR1|                                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unidade_de_controle:unidade_de_controle1|IR:IR1                                                          ; work         ;
+;       |contador:contador1|                    ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processador|unidade_de_controle:unidade_de_controle1|contador:contador1                                              ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |processador|unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate                                                                                                                                                                             ;
++----------------------+---------------+---------------+---------------+----------------+-------------+----------------------+---------------------+-----------------+----------------------+------------+--------------+-------------+---------------+--------------+-------------+
+; Name                 ; fstate.STOI_2 ; fstate.Load_3 ; fstate.Load_2 ; fstate.Store_2 ; fstate.STOI ; fstate.Jump_zero_jmp ; fstate.Jump_if_zero ; fstate.Subtract ; fstate.Load_constant ; fstate.Add ; fstate.Store ; fstate.Load ; fstate.Decode ; fstate.Fetch ; fstate.Init ;
++----------------------+---------------+---------------+---------------+----------------+-------------+----------------------+---------------------+-----------------+----------------------+------------+--------------+-------------+---------------+--------------+-------------+
+; fstate.Init          ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 0           ;
+; fstate.Fetch         ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 1            ; 1           ;
+; fstate.Decode        ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 1             ; 0            ; 1           ;
+; fstate.Load          ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 1           ; 0             ; 0            ; 1           ;
+; fstate.Store         ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 1            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Add           ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 1          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Load_constant ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 1                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Subtract      ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 1               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Jump_if_zero  ; 0             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 1                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Jump_zero_jmp ; 0             ; 0             ; 0             ; 0              ; 0           ; 1                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.STOI          ; 0             ; 0             ; 0             ; 0              ; 1           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Store_2       ; 0             ; 0             ; 0             ; 1              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Load_2        ; 0             ; 0             ; 1             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.Load_3        ; 0             ; 1             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
+; fstate.STOI_2        ; 1             ; 0             ; 0             ; 0              ; 0           ; 0                    ; 0                   ; 0               ; 0                    ; 0          ; 0            ; 0           ; 0             ; 0            ; 1           ;
++----------------------+---------------+---------------+---------------+----------------+-------------+----------------------+---------------------+-----------------+----------------------+------------+--------------+-------------+---------------+--------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                          ;
++-----------------------------------------------------+-------------------------------------------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                                                           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------------------------------------------------------+------------------------+
+; datapath:datapath1|display:disp|display1[1]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display1[2]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display1[3]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display1[6]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[0]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[1]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[2]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[3]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[4]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[5]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; datapath:datapath1|display:disp|display2[6]         ; datapath:datapath1|display:disp|WideNor0                                      ; yes                    ;
+; display:display_stoi|display1[1]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display1[2]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display1[3]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display1[6]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[0]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[1]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[2]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[3]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[4]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[5]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; display:display_stoi|display2[6]                    ; display:display_stoi|WideNor0                                                 ; yes                    ;
+; banco_instrucao:banco_instrucao1|data[1]            ; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch ; yes                    ;
+; banco_instrucao:banco_instrucao1|data[4]            ; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch ; yes                    ;
+; banco_instrucao:banco_instrucao1|data[13]           ; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch ; yes                    ;
+; banco_instrucao:banco_instrucao1|data[14]           ; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch ; yes                    ;
+; Number of user-specified and inferred latches = 26  ;                                                                               ;                        ;
++-----------------------------------------------------+-------------------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                            ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+; Register name                                                                         ; Reason for Removal                                                                    ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+; unidade_de_controle:unidade_de_controle1|IR:IR1|reg[0,2,3,5..12,15]                   ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][0]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][2]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][3]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][4]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][5]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][6]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][7]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][8]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][9]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][10]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][11]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][12]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][13]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][14]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][15]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][1]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][2]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][3]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][4]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][5]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][6]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][7]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][8]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][9]             ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][10]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][11]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][12]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][13]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][14]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][15]            ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][0]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][1]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][2]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][3]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][4]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][5]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][6]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][7]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][8]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][9]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][10]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][11]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][12]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][13]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][14]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][15]           ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][0]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][1]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][2]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][3]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][4]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][5]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][6]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][7]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][8]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][9]             ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][10]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][11]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][12]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][13]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][14]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][15]            ; Stuck at GND due to stuck port clock_enable                                           ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][0]             ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][1] ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Jump_zero_jmp ; Lost fanout                                                                           ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Store         ; Lost fanout                                                                           ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Load_constant ; Lost fanout                                                                           ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Store_2       ; Lost fanout                                                                           ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Jump_if_zero  ; Stuck at GND due to stuck port data_in                                                ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Init          ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][1] ;
+; unidade_de_controle:unidade_de_controle1|contador:contador1|contador[7..15]           ; Lost fanout                                                                           ;
+; unidade_de_controle:unidade_de_controle1|IR:IR1|reg[4,13,14]                          ; Merged with unidade_de_controle:unidade_de_controle1|IR:IR1|reg[1]                    ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Add           ; Stuck at GND due to stuck port data_in                                                ;
+; unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Subtract      ; Stuck at GND due to stuck port data_in                                                ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[2]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[2]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[3]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[3]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[4]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[4]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[5]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[5]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[6]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[6]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[7]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[7]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[15]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[15]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[14]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[14]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[13]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[13]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[12]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[12]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[11]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[11]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[10]                   ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[10]       ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[9]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[9]        ;
+; datapath:datapath1|BancoRegistrador:bancoRegistradores1|rq_data[8]                    ; Merged with datapath:datapath1|BancoRegistrador:bancoRegistradores1|rp_data[8]        ;
+; Total Number of Removed Registers = 285                                               ;                                                                                       ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                       ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name                                          ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; unidade_de_controle:unidade_de_controle1|IR:IR1|reg[0] ; Stuck at GND              ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][0],   ;
+;                                                        ; due to stuck port data_in ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][0],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][1],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][2],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][3],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][4],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][5],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][6],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][7],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][8],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][9],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][15], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][15],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][0],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][1],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][2],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][3],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][4],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][5],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][6],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][7],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][8],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][9],   ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][15]   ;
+; unidade_de_controle:unidade_de_controle1|IR:IR1|reg[8] ; Stuck at GND              ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][10],  ;
+;                                                        ; due to stuck port data_in ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[2][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[1][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[15][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[14][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[13][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[12][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[11][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][10], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][11], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][12], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][13], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[10][14], ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[9][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[8][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[7][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[6][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[5][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[4][14],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][10],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][11],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][12],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][13],  ;
+;                                                        ;                           ; datapath:datapath1|BancoRegistrador:bancoRegistradores1|registrador[3][14]   ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 51    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |processador|datapath:datapath1|mux_STOI:mux_mem|address[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memoria1|altsyncram:memoria[0][15]__1 ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
+; WIDTH_A                            ; 16                   ; Untyped                        ;
+; WIDTHAD_A                          ; 8                    ; Untyped                        ;
+; NUMWORDS_A                         ; 256                  ; Untyped                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 16                   ; Untyped                        ;
+; WIDTHAD_B                          ; 8                    ; Untyped                        ;
+; NUMWORDS_B                         ; 256                  ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_cod1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; Memoria:memoria1|altsyncram:memoria[0][15]__1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
+;     -- WIDTH_A                            ; 16                                            ;
+;     -- NUMWORDS_A                         ; 256                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 16                                            ;
+;     -- NUMWORDS_B                         ; 256                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "unidade_de_controle:unidade_de_controle1|Controlador:Controller1" ;
++-------+-------+----------+-------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                           ;
++-------+-------+----------+-------------------------------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                                      ;
++-------+-------+----------+-------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 06 11:23:45 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processador -c processador
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file unidade_de_controle.vhd
+    Info (12022): Found design unit 1: unidade_de_controle-arq
+    Info (12023): Found entity 1: unidade_de_controle
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: comparador-behavior
+    Info (12023): Found entity 1: comparador
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-arq
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file banco_instrucao.vhd
+    Info (12022): Found design unit 1: banco_instrucao-arq
+    Info (12023): Found entity 1: banco_instrucao
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistrador.vhd
+    Info (12022): Found design unit 1: BancoRegistrador-arq
+    Info (12023): Found entity 1: BancoRegistrador
+Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
+    Info (12022): Found design unit 1: contador-arquitetura
+    Info (12023): Found entity 1: contador
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: IR-arq
+    Info (12023): Found entity 1: IR
+Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
+    Info (12022): Found design unit 1: Memoria-arq
+    Info (12023): Found entity 1: Memoria
+Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus II megafunction library
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: MUX-mux_arq
+    Info (12023): Found entity 1: MUX
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-arq
+    Info (12023): Found entity 1: ULA
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: display-arq
+    Info (12023): Found entity 1: display
+Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
+    Info (12022): Found design unit 1: processador-arq
+    Info (12023): Found entity 1: processador
+Info (12021): Found 2 design units, including 1 entities, in source file memcell.vhd
+    Info (12022): Found design unit 1: memCell-behavior
+    Info (12023): Found entity 1: memCell
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_ram.vhd
+    Info (12022): Found design unit 1: decoder_ram-behavior
+    Info (12023): Found entity 1: decoder_ram
+Info (12021): Found 2 design units, including 1 entities, in source file mux_ram.vhd
+    Info (12022): Found design unit 1: mux_ram-behavior
+    Info (12023): Found entity 1: mux_ram
+Info (12021): Found 2 design units, including 1 entities, in source file memcell_reg.vhd
+    Info (12022): Found design unit 1: memCell_reg-behavior
+    Info (12023): Found entity 1: memCell_reg
+Info (12021): Found 2 design units, including 1 entities, in source file mux_reg.vhd
+    Info (12022): Found design unit 1: mux_reg-behavior
+    Info (12023): Found entity 1: mux_reg
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_reg.vhd
+    Info (12022): Found design unit 1: decoder_reg-behavior
+    Info (12023): Found entity 1: decoder_reg
+Info (12021): Found 2 design units, including 1 entities, in source file mux_stoi.vhd
+    Info (12022): Found design unit 1: mux_STOI-behavior
+    Info (12023): Found entity 1: mux_STOI
+Info (12127): Elaborating entity "processador" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:datapath1"
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(35): used implicit default value for signal "saida_rp_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "mux_STOI" for hierarchy "datapath:datapath1|mux_STOI:mux_mem"
+Warning (10492): VHDL Process Statement warning at mux_STOI.vhd(19): signal "mem_STOI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_STOI.vhd(21): signal "D_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "MUX" for hierarchy "datapath:datapath1|MUX:mux1"
+Warning (10492): VHDL Process Statement warning at MUX.vhd(29): signal "constante" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at MUX.vhd(18): inferring latch(es) for signal or variable "saida_mux", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "saida_mux[8]" at MUX.vhd(18)
+Info (12128): Elaborating entity "ULA" for hierarchy "datapath:datapath1|ULA:ula1"
+Warning (10631): VHDL Process Statement warning at ULA.vhd(18): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "output[0]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[1]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[2]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[3]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[4]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[5]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[6]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[7]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[8]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[9]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[10]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[11]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[12]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[13]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[14]" at ULA.vhd(18)
+Info (10041): Inferred latch for "output[15]" at ULA.vhd(18)
+Info (12128): Elaborating entity "BancoRegistrador" for hierarchy "datapath:datapath1|BancoRegistrador:bancoRegistradores1"
+Warning (10492): VHDL Process Statement warning at BancoRegistrador.vhd(31): signal "w_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at BancoRegistrador.vhd(32): signal "rp_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at BancoRegistrador.vhd(33): signal "rq_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "comparador" for hierarchy "datapath:datapath1|comparador:comparador1"
+Info (12128): Elaborating entity "display" for hierarchy "datapath:datapath1|display:disp"
+Warning (10631): VHDL Process Statement warning at display.vhd(15): inferring latch(es) for signal or variable "display1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at display.vhd(15): inferring latch(es) for signal or variable "display2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "display2[0]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[1]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[2]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[3]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[4]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[5]" at display.vhd(15)
+Info (10041): Inferred latch for "display2[6]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[0]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[1]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[2]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[3]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[4]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[5]" at display.vhd(15)
+Info (10041): Inferred latch for "display1[6]" at display.vhd(15)
+Info (12128): Elaborating entity "banco_instrucao" for hierarchy "banco_instrucao:banco_instrucao1"
+Warning (10492): VHDL Process Statement warning at banco_instrucao.vhd(26): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at banco_instrucao.vhd(27): signal "rd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at banco_instrucao.vhd(28): signal "memoria" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at banco_instrucao.vhd(28): signal "addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at banco_instrucao.vhd(20): inferring latch(es) for signal or variable "data", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "memoria[1..100]" at banco_instrucao.vhd(17)
+Info (10041): Inferred latch for "data[0]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[1]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[2]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[3]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[4]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[5]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[6]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[7]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[8]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[9]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[10]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[11]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[12]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[13]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[14]" at banco_instrucao.vhd(20)
+Info (10041): Inferred latch for "data[15]" at banco_instrucao.vhd(20)
+Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:memoria1"
+Warning (10492): VHDL Process Statement warning at Memoria.vhd(28): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (276027): Inferred dual-clock RAM node "Memoria:memoria1|altsyncram:memoria[0][15]__1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "Memoria:memoria1|altsyncram:memoria[0][15]__1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memoria:memoria1|altsyncram:memoria[0][15]__1"
+Info (12130): Elaborated megafunction instantiation "Memoria:memoria1|altsyncram:memoria[0][15]__1"
+Info (12133): Instantiated megafunction "Memoria:memoria1|altsyncram:memoria[0][15]__1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cod1.tdf
+    Info (12023): Found entity 1: altsyncram_cod1
+Info (12128): Elaborating entity "altsyncram_cod1" for hierarchy "Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ebh1.tdf
+    Info (12023): Found entity 1: altsyncram_ebh1
+Info (12128): Elaborating entity "altsyncram_ebh1" for hierarchy "Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1"
+Info (12128): Elaborating entity "unidade_de_controle" for hierarchy "unidade_de_controle:unidade_de_controle1"
+Warning (10541): VHDL Signal Declaration warning at unidade_de_controle.vhd(25): used implicit default value for signal "RF_W_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "contador" for hierarchy "unidade_de_controle:unidade_de_controle1|contador:contador1"
+Warning (10492): VHDL Process Statement warning at contador.vhd(24): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at contador.vhd(31): signal "contador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "IR" for hierarchy "unidade_de_controle:unidade_de_controle1|IR:IR1"
+Warning (12125): Using design file controlador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Controlador-BEHAVIOR
+    Info (12023): Found entity 1: Controlador
+Info (12128): Elaborating entity "Controlador" for hierarchy "unidade_de_controle:unidade_de_controle1|Controlador:Controller1"
+Warning (14026): LATCH primitive "datapath:datapath1|MUX:mux1|saida_mux[8]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[0]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[1]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[2]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[3]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[4]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[5]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[6]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[7]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[15]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[14]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[13]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[12]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[11]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[10]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[9]" is permanently enabled
+Warning (14026): LATCH primitive "datapath:datapath1|ULA:ula1|output[8]" is permanently enabled
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "datapath:datapath1|display:disp|display1[6]" merged with LATCH primitive "datapath:datapath1|display:disp|display1[1]"
+    Info (13026): Duplicate LATCH primitive "datapath:datapath1|display:disp|display1[3]" merged with LATCH primitive "datapath:datapath1|display:disp|display1[1]"
+    Info (13026): Duplicate LATCH primitive "datapath:datapath1|display:disp|display1[2]" merged with LATCH primitive "datapath:datapath1|display:disp|display1[1]"
+    Info (13026): Duplicate LATCH primitive "display:display_stoi|display1[6]" merged with LATCH primitive "display:display_stoi|display1[1]"
+    Info (13026): Duplicate LATCH primitive "display:display_stoi|display1[3]" merged with LATCH primitive "display:display_stoi|display1[1]"
+    Info (13026): Duplicate LATCH primitive "display:display_stoi|display1[2]" merged with LATCH primitive "display:display_stoi|display1[1]"
+    Info (13026): Duplicate LATCH primitive "banco_instrucao:banco_instrucao1|data[14]" merged with LATCH primitive "banco_instrucao:banco_instrucao1|data[1]"
+    Info (13026): Duplicate LATCH primitive "banco_instrucao:banco_instrucao1|data[13]" merged with LATCH primitive "banco_instrucao:banco_instrucao1|data[1]"
+    Info (13026): Duplicate LATCH primitive "banco_instrucao:banco_instrucao1|data[4]" merged with LATCH primitive "banco_instrucao:banco_instrucao1|data[1]"
+Warning (13012): Latch datapath:datapath1|display:disp|display1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch datapath:datapath1|display:disp|display2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|altsyncram:memoria[0][15]__1|altsyncram_cod1:auto_generated|altsyncram_ebh1:altsyncram1|q_a[0]
+Warning (13012): Latch display:display_stoi|display1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13012): Latch display:display_stoi|display2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Memoria:memoria1|memoria[1][0]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "display1[0]" is stuck at VCC
+    Warning (13410): Pin "display1[4]" is stuck at GND
+    Warning (13410): Pin "display1[5]" is stuck at GND
+    Warning (13410): Pin "display_stoi1[0]" is stuck at VCC
+    Warning (13410): Pin "display_stoi1[4]" is stuck at GND
+    Warning (13410): Pin "display_stoi1[5]" is stuck at GND
+    Warning (13410): Pin "ir_data[0]" is stuck at GND
+    Warning (13410): Pin "ir_data[2]" is stuck at GND
+    Warning (13410): Pin "ir_data[3]" is stuck at GND
+    Warning (13410): Pin "ir_data[5]" is stuck at GND
+    Warning (13410): Pin "ir_data[6]" is stuck at GND
+    Warning (13410): Pin "ir_data[7]" is stuck at GND
+    Warning (13410): Pin "ir_data[8]" is stuck at GND
+    Warning (13410): Pin "ir_data[9]" is stuck at GND
+    Warning (13410): Pin "ir_data[10]" is stuck at GND
+    Warning (13410): Pin "ir_data[11]" is stuck at GND
+    Warning (13410): Pin "ir_data[12]" is stuck at GND
+    Warning (13410): Pin "ir_data[15]" is stuck at GND
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 151 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 94 warnings
+    Info: Peak virtual memory: 393 megabytes
+    Info: Processing ended: Fri Dec 06 11:23:51 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
+
+

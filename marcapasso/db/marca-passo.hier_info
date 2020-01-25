@@ -1,0 +1,109 @@
+|pacemaker
+s => controller:component_controller.s
+clk_in => osc:component_osc.clk_in
+p <= slow:component_slow.slow_p
+
+
+|pacemaker|osc:component_osc
+clk_in => clk_out~reg0.CLK
+clk_in => contador[0].CLK
+clk_in => contador[1].CLK
+clk_in => contador[2].CLK
+clk_in => contador[3].CLK
+clk_in => contador[4].CLK
+clk_in => contador[5].CLK
+clk_in => contador[6].CLK
+clk_in => contador[7].CLK
+clk_in => contador[8].CLK
+clk_in => contador[9].CLK
+clk_in => contador[10].CLK
+clk_in => contador[11].CLK
+clk_in => contador[12].CLK
+clk_in => contador[13].CLK
+clk_in => contador[14].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pacemaker|timer:component_timer
+clk => z~reg0.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+t => contador.OUTPUTSELECT
+z <= z~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pacemaker|controller:component_controller
+clk => registrador2b:reg.clk
+s => comb_logic:logic.s
+z => comb_logic:logic.z
+t <= comb_logic:logic.t
+p <= comb_logic:logic.p
+
+
+|pacemaker|controller:component_controller|comb_logic:logic
+s => ep.IN0
+s => ep.IN0
+z => ep.IN1
+z => ep.IN1
+e[1] => ep.IN1
+e[1] => t.IN0
+e[1] => ep.IN0
+e[1] => ep.IN1
+e[1] => p.IN0
+e[0] => t.IN1
+e[0] => p.IN1
+e[0] => ep.IN1
+e[0] => ep.IN1
+e[0] => ep.IN1
+ep[1] <= ep.DB_MAX_OUTPUT_PORT_TYPE
+ep[0] <= ep.DB_MAX_OUTPUT_PORT_TYPE
+t <= t.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pacemaker|controller:component_controller|registrador2b:reg
+ep[1] => e[1]~reg0.DATAIN
+ep[0] => e[0]~reg0.DATAIN
+clk => e[1]~reg0.CLK
+clk => e[0]~reg0.CLK
+e[1] <= e[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+e[0] <= e[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pacemaker|slow:component_slow
+p => aux.OUTPUTSELECT
+p => slow_p.OUTPUTSELECT
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => slow_p~reg0.CLK
+clk => aux.CLK
+slow_p <= slow_p~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

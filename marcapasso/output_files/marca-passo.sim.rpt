@@ -1,0 +1,379 @@
+Simulator report for marca-passo
+Thu Oct 03 08:34:15 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 143 nodes    ;
+; Simulation Coverage         ;      48.25 % ;
+; Total Number of Transitions ; 181533       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                        ;               ;
+; Vector input source                                                                        ; C:/altera/13.0sp1/marcapasso/Waveform2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                         ; On            ;
+; Check outputs                                                                              ; Off                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      48.25 % ;
+; Total nodes checked                                 ; 143          ;
+; Total output ports checked                          ; 143          ;
+; Total output ports with complete 1/0-value coverage ; 69           ;
+; Total output ports with no 1/0-value coverage       ; 73           ;
+; Total output ports with no 1-value coverage         ; 73           ;
+; Total output ports with no 0-value coverage         ; 74           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                            ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; Node Name                                                        ; Output Port Name                                                 ; Output Port Type ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; |pacemaker|s                                                     ; |pacemaker|s                                                     ; out              ;
+; |pacemaker|clk_in                                                ; |pacemaker|clk_in                                                ; out              ;
+; |pacemaker|controller:component_controller|comb_logic:logic|ep~1 ; |pacemaker|controller:component_controller|comb_logic:logic|ep~1 ; out0             ;
+; |pacemaker|osc:component_osc|contador[5]                         ; |pacemaker|osc:component_osc|contador[5]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[4]                         ; |pacemaker|osc:component_osc|contador[4]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[3]                         ; |pacemaker|osc:component_osc|contador[3]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[2]                         ; |pacemaker|osc:component_osc|contador[2]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[1]                         ; |pacemaker|osc:component_osc|contador[1]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[0]                         ; |pacemaker|osc:component_osc|contador[0]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador~1                          ; |pacemaker|osc:component_osc|contador~1                          ; out              ;
+; |pacemaker|osc:component_osc|contador~2                          ; |pacemaker|osc:component_osc|contador~2                          ; out              ;
+; |pacemaker|osc:component_osc|contador~3                          ; |pacemaker|osc:component_osc|contador~3                          ; out              ;
+; |pacemaker|osc:component_osc|contador~4                          ; |pacemaker|osc:component_osc|contador~4                          ; out              ;
+; |pacemaker|osc:component_osc|contador~5                          ; |pacemaker|osc:component_osc|contador~5                          ; out              ;
+; |pacemaker|osc:component_osc|contador~6                          ; |pacemaker|osc:component_osc|contador~6                          ; out              ;
+; |pacemaker|osc:component_osc|contador~7                          ; |pacemaker|osc:component_osc|contador~7                          ; out              ;
+; |pacemaker|osc:component_osc|contador~8                          ; |pacemaker|osc:component_osc|contador~8                          ; out              ;
+; |pacemaker|osc:component_osc|contador~9                          ; |pacemaker|osc:component_osc|contador~9                          ; out              ;
+; |pacemaker|osc:component_osc|contador~10                         ; |pacemaker|osc:component_osc|contador~10                         ; out              ;
+; |pacemaker|osc:component_osc|contador~11                         ; |pacemaker|osc:component_osc|contador~11                         ; out              ;
+; |pacemaker|osc:component_osc|contador~12                         ; |pacemaker|osc:component_osc|contador~12                         ; out              ;
+; |pacemaker|osc:component_osc|contador~13                         ; |pacemaker|osc:component_osc|contador~13                         ; out              ;
+; |pacemaker|osc:component_osc|contador~14                         ; |pacemaker|osc:component_osc|contador~14                         ; out              ;
+; |pacemaker|osc:component_osc|contador~16                         ; |pacemaker|osc:component_osc|contador~16                         ; out              ;
+; |pacemaker|osc:component_osc|contador~17                         ; |pacemaker|osc:component_osc|contador~17                         ; out              ;
+; |pacemaker|osc:component_osc|contador~18                         ; |pacemaker|osc:component_osc|contador~18                         ; out              ;
+; |pacemaker|osc:component_osc|contador~19                         ; |pacemaker|osc:component_osc|contador~19                         ; out              ;
+; |pacemaker|osc:component_osc|contador~20                         ; |pacemaker|osc:component_osc|contador~20                         ; out              ;
+; |pacemaker|osc:component_osc|contador~21                         ; |pacemaker|osc:component_osc|contador~21                         ; out              ;
+; |pacemaker|osc:component_osc|contador~22                         ; |pacemaker|osc:component_osc|contador~22                         ; out              ;
+; |pacemaker|osc:component_osc|contador~23                         ; |pacemaker|osc:component_osc|contador~23                         ; out              ;
+; |pacemaker|osc:component_osc|contador~24                         ; |pacemaker|osc:component_osc|contador~24                         ; out              ;
+; |pacemaker|osc:component_osc|contador~25                         ; |pacemaker|osc:component_osc|contador~25                         ; out              ;
+; |pacemaker|osc:component_osc|contador~26                         ; |pacemaker|osc:component_osc|contador~26                         ; out              ;
+; |pacemaker|osc:component_osc|contador~27                         ; |pacemaker|osc:component_osc|contador~27                         ; out              ;
+; |pacemaker|osc:component_osc|contador~28                         ; |pacemaker|osc:component_osc|contador~28                         ; out              ;
+; |pacemaker|osc:component_osc|contador~29                         ; |pacemaker|osc:component_osc|contador~29                         ; out              ;
+; |pacemaker|osc:component_osc|contador[6]                         ; |pacemaker|osc:component_osc|contador[6]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[7]                         ; |pacemaker|osc:component_osc|contador[7]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[8]                         ; |pacemaker|osc:component_osc|contador[8]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[9]                         ; |pacemaker|osc:component_osc|contador[9]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[10]                        ; |pacemaker|osc:component_osc|contador[10]                        ; regout           ;
+; |pacemaker|osc:component_osc|contador[11]                        ; |pacemaker|osc:component_osc|contador[11]                        ; regout           ;
+; |pacemaker|osc:component_osc|contador[12]                        ; |pacemaker|osc:component_osc|contador[12]                        ; regout           ;
+; |pacemaker|osc:component_osc|Add0~0                              ; |pacemaker|osc:component_osc|Add0~0                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~1                              ; |pacemaker|osc:component_osc|Add0~1                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~2                              ; |pacemaker|osc:component_osc|Add0~2                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~3                              ; |pacemaker|osc:component_osc|Add0~3                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~4                              ; |pacemaker|osc:component_osc|Add0~4                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~5                              ; |pacemaker|osc:component_osc|Add0~5                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~6                              ; |pacemaker|osc:component_osc|Add0~6                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~7                              ; |pacemaker|osc:component_osc|Add0~7                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~8                              ; |pacemaker|osc:component_osc|Add0~8                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~9                              ; |pacemaker|osc:component_osc|Add0~9                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~10                             ; |pacemaker|osc:component_osc|Add0~10                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~11                             ; |pacemaker|osc:component_osc|Add0~11                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~12                             ; |pacemaker|osc:component_osc|Add0~12                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~13                             ; |pacemaker|osc:component_osc|Add0~13                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~14                             ; |pacemaker|osc:component_osc|Add0~14                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~15                             ; |pacemaker|osc:component_osc|Add0~15                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~16                             ; |pacemaker|osc:component_osc|Add0~16                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~17                             ; |pacemaker|osc:component_osc|Add0~17                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~18                             ; |pacemaker|osc:component_osc|Add0~18                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~19                             ; |pacemaker|osc:component_osc|Add0~19                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~20                             ; |pacemaker|osc:component_osc|Add0~20                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~21                             ; |pacemaker|osc:component_osc|Add0~21                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~22                             ; |pacemaker|osc:component_osc|Add0~22                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~23                             ; |pacemaker|osc:component_osc|Add0~23                             ; out0             ;
+; |pacemaker|osc:component_osc|Add0~24                             ; |pacemaker|osc:component_osc|Add0~24                             ; out0             ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |pacemaker|p                                                      ; |pacemaker|p                                                      ; pin_out          ;
+; |pacemaker|state[1]                                               ; |pacemaker|state[1]                                               ; pin_out          ;
+; |pacemaker|state[0]                                               ; |pacemaker|state[0]                                               ; pin_out          ;
+; |pacemaker|slow:component_slow|aux~0                              ; |pacemaker|slow:component_slow|aux~0                              ; out              ;
+; |pacemaker|slow:component_slow|slow_p~0                           ; |pacemaker|slow:component_slow|slow_p~0                           ; out              ;
+; |pacemaker|slow:component_slow|contador~0                         ; |pacemaker|slow:component_slow|contador~0                         ; out              ;
+; |pacemaker|slow:component_slow|contador~1                         ; |pacemaker|slow:component_slow|contador~1                         ; out              ;
+; |pacemaker|slow:component_slow|contador~2                         ; |pacemaker|slow:component_slow|contador~2                         ; out              ;
+; |pacemaker|slow:component_slow|contador~3                         ; |pacemaker|slow:component_slow|contador~3                         ; out              ;
+; |pacemaker|slow:component_slow|contador~4                         ; |pacemaker|slow:component_slow|contador~4                         ; out              ;
+; |pacemaker|slow:component_slow|contador~5                         ; |pacemaker|slow:component_slow|contador~5                         ; out              ;
+; |pacemaker|slow:component_slow|contador~6                         ; |pacemaker|slow:component_slow|contador~6                         ; out              ;
+; |pacemaker|slow:component_slow|contador~7                         ; |pacemaker|slow:component_slow|contador~7                         ; out              ;
+; |pacemaker|slow:component_slow|contador~8                         ; |pacemaker|slow:component_slow|contador~8                         ; out              ;
+; |pacemaker|slow:component_slow|contador~9                         ; |pacemaker|slow:component_slow|contador~9                         ; out              ;
+; |pacemaker|slow:component_slow|contador[0]                        ; |pacemaker|slow:component_slow|contador[0]                        ; regout           ;
+; |pacemaker|slow:component_slow|aux~1                              ; |pacemaker|slow:component_slow|aux~1                              ; out              ;
+; |pacemaker|slow:component_slow|contador~10                        ; |pacemaker|slow:component_slow|contador~10                        ; out              ;
+; |pacemaker|slow:component_slow|contador~11                        ; |pacemaker|slow:component_slow|contador~11                        ; out              ;
+; |pacemaker|slow:component_slow|contador~12                        ; |pacemaker|slow:component_slow|contador~12                        ; out              ;
+; |pacemaker|slow:component_slow|contador~13                        ; |pacemaker|slow:component_slow|contador~13                        ; out              ;
+; |pacemaker|slow:component_slow|contador~14                        ; |pacemaker|slow:component_slow|contador~14                        ; out              ;
+; |pacemaker|slow:component_slow|contador~15                        ; |pacemaker|slow:component_slow|contador~15                        ; out              ;
+; |pacemaker|slow:component_slow|contador~16                        ; |pacemaker|slow:component_slow|contador~16                        ; out              ;
+; |pacemaker|slow:component_slow|contador~17                        ; |pacemaker|slow:component_slow|contador~17                        ; out              ;
+; |pacemaker|slow:component_slow|contador~18                        ; |pacemaker|slow:component_slow|contador~18                        ; out              ;
+; |pacemaker|slow:component_slow|contador~19                        ; |pacemaker|slow:component_slow|contador~19                        ; out              ;
+; |pacemaker|slow:component_slow|slow_p~1                           ; |pacemaker|slow:component_slow|slow_p~1                           ; out              ;
+; |pacemaker|slow:component_slow|contador[1]                        ; |pacemaker|slow:component_slow|contador[1]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[2]                        ; |pacemaker|slow:component_slow|contador[2]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[3]                        ; |pacemaker|slow:component_slow|contador[3]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[4]                        ; |pacemaker|slow:component_slow|contador[4]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[5]                        ; |pacemaker|slow:component_slow|contador[5]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[6]                        ; |pacemaker|slow:component_slow|contador[6]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[7]                        ; |pacemaker|slow:component_slow|contador[7]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[8]                        ; |pacemaker|slow:component_slow|contador[8]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[9]                        ; |pacemaker|slow:component_slow|contador[9]                        ; regout           ;
+; |pacemaker|slow:component_slow|slow_p                             ; |pacemaker|slow:component_slow|slow_p                             ; regout           ;
+; |pacemaker|slow:component_slow|aux                                ; |pacemaker|slow:component_slow|aux                                ; regout           ;
+; |pacemaker|controller:component_controller|registrador2b:reg|e[1] ; |pacemaker|controller:component_controller|registrador2b:reg|e[1] ; regout           ;
+; |pacemaker|controller:component_controller|registrador2b:reg|e[0] ; |pacemaker|controller:component_controller|registrador2b:reg|e[0] ; regout           ;
+; |pacemaker|controller:component_controller|comb_logic:logic|ep[0] ; |pacemaker|controller:component_controller|comb_logic:logic|ep[0] ; out0             ;
+; |pacemaker|controller:component_controller|comb_logic:logic|ep~3  ; |pacemaker|controller:component_controller|comb_logic:logic|ep~3  ; out0             ;
+; |pacemaker|controller:component_controller|comb_logic:logic|p     ; |pacemaker|controller:component_controller|comb_logic:logic|p     ; out0             ;
+; |pacemaker|osc:component_osc|process_0~0                          ; |pacemaker|osc:component_osc|process_0~0                          ; out0             ;
+; |pacemaker|osc:component_osc|clk_out~0                            ; |pacemaker|osc:component_osc|clk_out~0                            ; out              ;
+; |pacemaker|osc:component_osc|contador~0                           ; |pacemaker|osc:component_osc|contador~0                           ; out              ;
+; |pacemaker|osc:component_osc|clk_out                              ; |pacemaker|osc:component_osc|clk_out                              ; regout           ;
+; |pacemaker|osc:component_osc|process_0~1                          ; |pacemaker|osc:component_osc|process_0~1                          ; out0             ;
+; |pacemaker|osc:component_osc|clk_out~1                            ; |pacemaker|osc:component_osc|clk_out~1                            ; out              ;
+; |pacemaker|osc:component_osc|contador~15                          ; |pacemaker|osc:component_osc|contador~15                          ; out              ;
+; |pacemaker|osc:component_osc|contador[14]                         ; |pacemaker|osc:component_osc|contador[14]                         ; regout           ;
+; |pacemaker|slow:component_slow|Add0~0                             ; |pacemaker|slow:component_slow|Add0~0                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~1                             ; |pacemaker|slow:component_slow|Add0~1                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~2                             ; |pacemaker|slow:component_slow|Add0~2                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~3                             ; |pacemaker|slow:component_slow|Add0~3                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~4                             ; |pacemaker|slow:component_slow|Add0~4                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~5                             ; |pacemaker|slow:component_slow|Add0~5                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~6                             ; |pacemaker|slow:component_slow|Add0~6                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~7                             ; |pacemaker|slow:component_slow|Add0~7                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~8                             ; |pacemaker|slow:component_slow|Add0~8                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~9                             ; |pacemaker|slow:component_slow|Add0~9                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~10                            ; |pacemaker|slow:component_slow|Add0~10                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~11                            ; |pacemaker|slow:component_slow|Add0~11                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~12                            ; |pacemaker|slow:component_slow|Add0~12                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~13                            ; |pacemaker|slow:component_slow|Add0~13                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~14                            ; |pacemaker|slow:component_slow|Add0~14                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~15                            ; |pacemaker|slow:component_slow|Add0~15                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~16                            ; |pacemaker|slow:component_slow|Add0~16                            ; out0             ;
+; |pacemaker|osc:component_osc|Add0~25                              ; |pacemaker|osc:component_osc|Add0~25                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~26                              ; |pacemaker|osc:component_osc|Add0~26                              ; out0             ;
+; |pacemaker|slow:component_slow|Equal0~0                           ; |pacemaker|slow:component_slow|Equal0~0                           ; out0             ;
+; |pacemaker|osc:component_osc|Equal0~0                             ; |pacemaker|osc:component_osc|Equal0~0                             ; out0             ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |pacemaker|p                                                      ; |pacemaker|p                                                      ; pin_out          ;
+; |pacemaker|state[1]                                               ; |pacemaker|state[1]                                               ; pin_out          ;
+; |pacemaker|state[0]                                               ; |pacemaker|state[0]                                               ; pin_out          ;
+; |pacemaker|slow:component_slow|aux~0                              ; |pacemaker|slow:component_slow|aux~0                              ; out              ;
+; |pacemaker|slow:component_slow|slow_p~0                           ; |pacemaker|slow:component_slow|slow_p~0                           ; out              ;
+; |pacemaker|slow:component_slow|contador~0                         ; |pacemaker|slow:component_slow|contador~0                         ; out              ;
+; |pacemaker|slow:component_slow|contador~1                         ; |pacemaker|slow:component_slow|contador~1                         ; out              ;
+; |pacemaker|slow:component_slow|contador~2                         ; |pacemaker|slow:component_slow|contador~2                         ; out              ;
+; |pacemaker|slow:component_slow|contador~3                         ; |pacemaker|slow:component_slow|contador~3                         ; out              ;
+; |pacemaker|slow:component_slow|contador~4                         ; |pacemaker|slow:component_slow|contador~4                         ; out              ;
+; |pacemaker|slow:component_slow|contador~5                         ; |pacemaker|slow:component_slow|contador~5                         ; out              ;
+; |pacemaker|slow:component_slow|contador~6                         ; |pacemaker|slow:component_slow|contador~6                         ; out              ;
+; |pacemaker|slow:component_slow|contador~7                         ; |pacemaker|slow:component_slow|contador~7                         ; out              ;
+; |pacemaker|slow:component_slow|contador~8                         ; |pacemaker|slow:component_slow|contador~8                         ; out              ;
+; |pacemaker|slow:component_slow|contador~9                         ; |pacemaker|slow:component_slow|contador~9                         ; out              ;
+; |pacemaker|slow:component_slow|contador[0]                        ; |pacemaker|slow:component_slow|contador[0]                        ; regout           ;
+; |pacemaker|slow:component_slow|aux~1                              ; |pacemaker|slow:component_slow|aux~1                              ; out              ;
+; |pacemaker|slow:component_slow|contador~10                        ; |pacemaker|slow:component_slow|contador~10                        ; out              ;
+; |pacemaker|slow:component_slow|contador~11                        ; |pacemaker|slow:component_slow|contador~11                        ; out              ;
+; |pacemaker|slow:component_slow|contador~12                        ; |pacemaker|slow:component_slow|contador~12                        ; out              ;
+; |pacemaker|slow:component_slow|contador~13                        ; |pacemaker|slow:component_slow|contador~13                        ; out              ;
+; |pacemaker|slow:component_slow|contador~14                        ; |pacemaker|slow:component_slow|contador~14                        ; out              ;
+; |pacemaker|slow:component_slow|contador~15                        ; |pacemaker|slow:component_slow|contador~15                        ; out              ;
+; |pacemaker|slow:component_slow|contador~16                        ; |pacemaker|slow:component_slow|contador~16                        ; out              ;
+; |pacemaker|slow:component_slow|contador~17                        ; |pacemaker|slow:component_slow|contador~17                        ; out              ;
+; |pacemaker|slow:component_slow|contador~18                        ; |pacemaker|slow:component_slow|contador~18                        ; out              ;
+; |pacemaker|slow:component_slow|contador~19                        ; |pacemaker|slow:component_slow|contador~19                        ; out              ;
+; |pacemaker|slow:component_slow|slow_p~1                           ; |pacemaker|slow:component_slow|slow_p~1                           ; out              ;
+; |pacemaker|slow:component_slow|contador[1]                        ; |pacemaker|slow:component_slow|contador[1]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[2]                        ; |pacemaker|slow:component_slow|contador[2]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[3]                        ; |pacemaker|slow:component_slow|contador[3]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[4]                        ; |pacemaker|slow:component_slow|contador[4]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[5]                        ; |pacemaker|slow:component_slow|contador[5]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[6]                        ; |pacemaker|slow:component_slow|contador[6]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[7]                        ; |pacemaker|slow:component_slow|contador[7]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[8]                        ; |pacemaker|slow:component_slow|contador[8]                        ; regout           ;
+; |pacemaker|slow:component_slow|contador[9]                        ; |pacemaker|slow:component_slow|contador[9]                        ; regout           ;
+; |pacemaker|slow:component_slow|slow_p                             ; |pacemaker|slow:component_slow|slow_p                             ; regout           ;
+; |pacemaker|slow:component_slow|aux                                ; |pacemaker|slow:component_slow|aux                                ; regout           ;
+; |pacemaker|controller:component_controller|registrador2b:reg|e[1] ; |pacemaker|controller:component_controller|registrador2b:reg|e[1] ; regout           ;
+; |pacemaker|controller:component_controller|registrador2b:reg|e[0] ; |pacemaker|controller:component_controller|registrador2b:reg|e[0] ; regout           ;
+; |pacemaker|controller:component_controller|comb_logic:logic|ep[0] ; |pacemaker|controller:component_controller|comb_logic:logic|ep[0] ; out0             ;
+; |pacemaker|controller:component_controller|comb_logic:logic|ep~3  ; |pacemaker|controller:component_controller|comb_logic:logic|ep~3  ; out0             ;
+; |pacemaker|controller:component_controller|comb_logic:logic|p     ; |pacemaker|controller:component_controller|comb_logic:logic|p     ; out0             ;
+; |pacemaker|osc:component_osc|process_0~0                          ; |pacemaker|osc:component_osc|process_0~0                          ; out0             ;
+; |pacemaker|osc:component_osc|clk_out~0                            ; |pacemaker|osc:component_osc|clk_out~0                            ; out              ;
+; |pacemaker|osc:component_osc|contador~0                           ; |pacemaker|osc:component_osc|contador~0                           ; out              ;
+; |pacemaker|osc:component_osc|clk_out                              ; |pacemaker|osc:component_osc|clk_out                              ; regout           ;
+; |pacemaker|osc:component_osc|process_0~1                          ; |pacemaker|osc:component_osc|process_0~1                          ; out0             ;
+; |pacemaker|osc:component_osc|clk_out~1                            ; |pacemaker|osc:component_osc|clk_out~1                            ; out              ;
+; |pacemaker|osc:component_osc|contador~15                          ; |pacemaker|osc:component_osc|contador~15                          ; out              ;
+; |pacemaker|osc:component_osc|contador[13]                         ; |pacemaker|osc:component_osc|contador[13]                         ; regout           ;
+; |pacemaker|osc:component_osc|contador[14]                         ; |pacemaker|osc:component_osc|contador[14]                         ; regout           ;
+; |pacemaker|slow:component_slow|Add0~0                             ; |pacemaker|slow:component_slow|Add0~0                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~1                             ; |pacemaker|slow:component_slow|Add0~1                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~2                             ; |pacemaker|slow:component_slow|Add0~2                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~3                             ; |pacemaker|slow:component_slow|Add0~3                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~4                             ; |pacemaker|slow:component_slow|Add0~4                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~5                             ; |pacemaker|slow:component_slow|Add0~5                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~6                             ; |pacemaker|slow:component_slow|Add0~6                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~7                             ; |pacemaker|slow:component_slow|Add0~7                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~8                             ; |pacemaker|slow:component_slow|Add0~8                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~9                             ; |pacemaker|slow:component_slow|Add0~9                             ; out0             ;
+; |pacemaker|slow:component_slow|Add0~10                            ; |pacemaker|slow:component_slow|Add0~10                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~11                            ; |pacemaker|slow:component_slow|Add0~11                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~12                            ; |pacemaker|slow:component_slow|Add0~12                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~13                            ; |pacemaker|slow:component_slow|Add0~13                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~14                            ; |pacemaker|slow:component_slow|Add0~14                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~15                            ; |pacemaker|slow:component_slow|Add0~15                            ; out0             ;
+; |pacemaker|slow:component_slow|Add0~16                            ; |pacemaker|slow:component_slow|Add0~16                            ; out0             ;
+; |pacemaker|osc:component_osc|Add0~25                              ; |pacemaker|osc:component_osc|Add0~25                              ; out0             ;
+; |pacemaker|osc:component_osc|Add0~26                              ; |pacemaker|osc:component_osc|Add0~26                              ; out0             ;
+; |pacemaker|slow:component_slow|Equal0~0                           ; |pacemaker|slow:component_slow|Equal0~0                           ; out0             ;
+; |pacemaker|osc:component_osc|Equal0~0                             ; |pacemaker|osc:component_osc|Equal0~0                             ; out0             ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Oct 03 08:34:13 2019
+Info: Command: quartus_sim --simulation_results_format=VWF marca-passo -c marca-passo
+Info (324025): Using vector source file "C:/altera/13.0sp1/marcapasso/Waveform2.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      48.25 %
+Info (328052): Number of transitions in simulation is 181533
+Info (324045): Vector file marca-passo.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Warning (292006): Can't contact license server "1800@LASIC.UFRN.BR" -- this server will be ignored
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 257 megabytes
+    Info: Processing ended: Thu Oct 03 08:34:16 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

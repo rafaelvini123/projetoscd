@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\leonm\Desktop\processador\simulation\qsim
+vBancoRegistrador
+Z1 I>YF25N9eQL27j6QoiJDFQ1
+Z2 VZJ=aVLU4=hYXg:<6<`Aa@1
+Z3 dC:\Users\leonm\Desktop\processador\simulation\qsim
+Z4 w1575570156
+Z5 8processador.vo
+Z6 Fprocessador.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|processador.vo|
+Z9 o-work work -O0
+Z10 n@banco@registrador
+!i10b 1
+Z11 !s100 NzH:eei8bf<:<8<cK3>U?3
+!s85 0
+Z12 !s108 1575570157.051000
+Z13 !s107 processador.vo|
+!s101 -O0
+vBancoRegistrador_vlg_check_tst
+!i10b 1
+!s100 k_>n2WnDmkEMkMZEkE5fN0
+IMbz8Yno0BK2;Zb32@NCiQ3
+VhD2CVPEoW3GTXL@L5:CUE2
+R3
+Z14 w1575570155
+Z15 8processador.vt
+Z16 Fprocessador.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z17 !s108 1575570157.158000
+Z18 !s107 processador.vt|
+Z19 !s90 -work|work|processador.vt|
+!s101 -O0
+R9
+n@banco@registrador_vlg_check_tst
+vBancoRegistrador_vlg_sample_tst
+!i10b 1
+!s100 H7V0:eoQ2CdPZJDD[H?[N1
+I;m5E^60_7he@b2iQoabS70
+V7]5FC]4@Wa<Z6VFT=`BKO1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@banco@registrador_vlg_sample_tst
+vBancoRegistrador_vlg_vec_tst
+!i10b 1
+!s100 NNaE`T@a[VZ:8lLVB0b:`3
+IQ;;^HzHK:G?jb5oDLJ=LA3
+V_bUcn=[OK@D>P>a5K1@co3
+R3
+R14
+R15
+R16
+L0 731
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@banco@registrador_vlg_vec_tst
+vMemoria
+Z20 IESSodda9K^55<85aoi@>c0
+Z21 VID<BX6]ANC46;P_Mk]8na0
+R3
+Z22 w1575570034
+R5
+R6
+L0 31
+R7
+r1
+31
+R9
+Z23 n@memoria
+Z24 !s100 `M_cNZ8=^j<kSg_b4bl7Y3
+Z25 !s108 1575570035.274000
+R13
+R8
+!i10b 1
+!s85 0
+!s101 -O0
+vMemoria_vlg_check_tst
+Z26 I7bV1a5hSR>ccmM7Oe_hc43
+Z27 VBb5<D_0CfQlRE3@ZcZ[Jh1
+R3
+Z28 w1575570033
+R15
+R16
+L0 65
+R7
+r1
+31
+Z29 !s108 1575570035.837000
+Z30 !s107 processador.vt|
+R19
+R9
+Z31 n@memoria_vlg_check_tst
+Z32 !s100 A2COOEP_Sg?cKhJ8X6Sc73
+!i10b 1
+!s85 0
+!s101 -O0
+vMemoria_vlg_sample_tst
+Z33 IHW5EQOnA>mSCnFVS02@iY3
+Z34 VHSmRRke?U7Df1ojLO<:7D2
+R3
+R28
+R15
+R16
+L0 29
+R7
+r1
+31
+R29
+R30
+R19
+R9
+Z35 n@memoria_vlg_sample_tst
+Z36 !s100 Zbe4N@7Z>Hm9Y4M7MTKHd0
+!i10b 1
+!s85 0
+!s101 -O0
+vMemoria_vlg_vec_tst
+Z37 I315fllAKOf<^LRdn9:EfI1
+Z38 V`g2@da7DPnl0jJ@76KOC63
+R3
+R28
+R15
+R16
+Z39 L0 434
+R7
+r1
+31
+R29
+R30
+R19
+R9
+Z40 n@memoria_vlg_vec_tst
+Z41 !s100 R^V3F[<k<6KMTnWX<LlL^3
+!i10b 1
+!s85 0
+!s101 -O0

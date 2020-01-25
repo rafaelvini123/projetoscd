@@ -1,0 +1,18 @@
+
+State Machine - |processador|unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate
+Name fstate.STOI_2 fstate.Load_3 fstate.Load_2 fstate.Store_2 fstate.STOI fstate.Jump_zero_jmp fstate.Jump_if_zero fstate.Subtract fstate.Load_constant fstate.Add fstate.Store fstate.Load fstate.Decode fstate.Fetch fstate.Init 
+fstate.Init 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fstate.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+fstate.Decode 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.Load 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+fstate.Store 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+fstate.Add 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+fstate.Load_constant 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+fstate.Subtract 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+fstate.Jump_if_zero 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+fstate.Jump_zero_jmp 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+fstate.STOI 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+fstate.Store_2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+fstate.Load_2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.Load_3 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.STOI_2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

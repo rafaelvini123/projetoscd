@@ -1,0 +1,141 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -10.134
+TNS   : -32248.174
+
+Type  : Slow Model Setup 'Memoria:memoria1|R_data[0]'
+Slack : -3.565
+TNS   : -23.855
+
+Type  : Slow Model Setup 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : -2.585
+TNS   : -10.234
+
+Type  : Slow Model Setup 'Memoria:memoria1|memoria[8][0]'
+Slack : -1.633
+TNS   : -9.902
+
+Type  : Slow Model Setup 'PC_inc'
+Slack : -0.758
+TNS   : -3.167
+
+Type  : Slow Model Hold 'Memoria:memoria1|R_data[0]'
+Slack : -4.066
+TNS   : -27.497
+
+Type  : Slow Model Hold 'Memoria:memoria1|memoria[8][0]'
+Slack : -3.856
+TNS   : -29.371
+
+Type  : Slow Model Hold 'clock'
+Slack : -2.569
+TNS   : -5.543
+
+Type  : Slow Model Hold 'PC_inc'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : 2.139
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'PC_inc'
+Slack : -0.282
+TNS   : -1.974
+
+Type  : Slow Model Removal 'PC_inc'
+Slack : 1.052
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.627
+TNS   : -4311.112
+
+Type  : Slow Model Minimum Pulse Width 'PC_inc'
+Slack : -1.380
+TNS   : -8.380
+
+Type  : Slow Model Minimum Pulse Width 'Memoria:memoria1|R_data[0]'
+Slack : -0.103
+TNS   : -7.486
+
+Type  : Slow Model Minimum Pulse Width 'Memoria:memoria1|memoria[8][0]'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clock'
+Slack : -4.876
+TNS   : -15451.587
+
+Type  : Fast Model Setup 'Memoria:memoria1|R_data[0]'
+Slack : -1.276
+TNS   : -8.132
+
+Type  : Fast Model Setup 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : -1.017
+TNS   : -4.036
+
+Type  : Fast Model Setup 'Memoria:memoria1|memoria[8][0]'
+Slack : -0.369
+TNS   : -1.627
+
+Type  : Fast Model Setup 'PC_inc'
+Slack : 0.213
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Memoria:memoria1|R_data[0]'
+Slack : -2.171
+TNS   : -14.771
+
+Type  : Fast Model Hold 'Memoria:memoria1|memoria[8][0]'
+Slack : -2.112
+TNS   : -16.118
+
+Type  : Fast Model Hold 'clock'
+Slack : -1.608
+TNS   : -5.534
+
+Type  : Fast Model Hold 'PC_inc'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : 1.426
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'PC_inc'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Fast Model Removal 'PC_inc'
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.627
+TNS   : -4311.112
+
+Type  : Fast Model Minimum Pulse Width 'PC_inc'
+Slack : -1.380
+TNS   : -8.380
+
+Type  : Fast Model Minimum Pulse Width 'Memoria:memoria1|R_data[0]'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Memoria:memoria1|memoria[8][0]'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'unidade_de_controle:unidade_de_controle1|Controlador:Controller1|fstate.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

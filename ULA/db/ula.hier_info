@@ -1,0 +1,11 @@
+|ula
+S[0] => ~NO_FANOUT~
+S[1] => ~NO_FANOUT~
+S[2] => ~NO_FANOUT~
+Y[0] << <GND>
+Y[1] << <GND>
+Y[2] << <GND>
+Y[3] << <GND>
+Co << <GND>
+
+
