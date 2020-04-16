@@ -1,2 +1,2 @@
-# projetosCD
-projetos desenvolvidos durante a disciplina de Circuitos Digitais
+# Digital Circuits
+All codes developed during the course of Digital Circuits
